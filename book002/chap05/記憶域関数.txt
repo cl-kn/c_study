@@ -1,0 +1,23 @@
+calloc(size_t nmemb, size_t size)
+・指定バイト分のメモリ領域を確保しその領域を 0 で初期化
+
+#include <stdlib.h>
+
+void *calloc(
+    size_t nmemb,//要素数
+    size_t size//各要素のサイズ
+);
+
+戻り値 true：確保したメモリ領域へのポインタ false：空ポインタ (NULL)
+
+
+malloc(size_t size)
+・指定バイト分のメモリ領域を確保
+
+#include <stdlib.h>
+
+void *malloc(
+    size_t size//確保したいメモリ領域のサイズ
+);
+
+戻り値 true：確保したメモリ領域へのポインタ false：空ポインタ (NULL)
