@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "tasks": [
         {
             "type": "cppbuild",
@@ -24,4 +25,31 @@
         }
     ],
     "version": "2.0.0"
+=======
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "process", //11月5日：カレントフォルダにビルドファイル生成
+			"label": "C/C++: gcc.exe build active file",
+			"command": "C:\\MinGW\\bin\\gcc.exe",
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\MinGW\\bin\\gcc.exe"
+		}
+	]
+>>>>>>> 9e6bcd6ca829234679250298ee8a22bba6830d52
 }

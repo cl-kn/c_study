@@ -1,15 +1,18 @@
 //***************************************************
 /** プリプロセッサ
  * 「define]」マクロ定義
+ * 11/4 , 11/5
  */
 //***************************************************
 
 #include <stdio.h>
 
 //マクロ定義 慣例で、大文字、引数名の大文字
-#define D_KIND_APPLE_ID (1)
-#define D_KIND_PEACH_ID (2)
-#define D_KIND_MELON_ID (3)
+#define D_KIND_APPLE_ID (1) //リンゴID
+#define D_KIND_PEACH_ID (2) //モモID
+#define D_KIND_MELON_ID (3) //メロンID
+#define PI (3.141592)       //円周率
+#define D_HELLO "Hello" //文字列もマクロ定義可能
 
 //三角形の面積を求める関数マクロ
 #define triangle(base, high) ((base) * (high) / 2.0)
@@ -54,6 +57,7 @@ int main(void)
  * ・文字列をプログラム中で値に置換する
  * ・プリプロセッサがこれを読み取り、修正する
  * ・定数値の一括変更が便利
+ * ・値の型の制限がない
  *
  * 関数マクロ定義
  * ・

@@ -9,6 +9,8 @@
  *
  * 10/27 改修版
  * ・バブルソートからクイックソートへ変更
+ * 11/5 修正
+ * ・コメントアウト個所を、 #if 0 ～ #endif へ変更
 */
 //***************************************************
 
@@ -163,84 +165,90 @@ void add_rank(int score_arr[][NUM], int arr_num)
 }
 
 //降順ソート & ランク付け関数
-// void sort_rank(int array[][NUM], int arr_num)
-// {
-//     int i, j;
-//     int tmp = 0;
-//     int rank = 0;
-//     int value = 0;
+void sort_rank(int array[][NUM], int arr_num)
+{
+    int i, j;
+    int tmp = 0;
+    int rank = 0;
+    int value = 0;
 
-//     array[0][1] = rank;
+    array[0][1] = rank;
 
-//     for (i = 0; i < arr_num; i++)
-//     {
-//         for (j = i + 1; j < arr_num; j++)
-//         {
-//             if (array[i][0] < array[j][0])
-//             {
-//                 swap(&array[i][0], &array[j][0]);
-//             }
-//         }
-//         if (array[i][0] != value)
-//         {
-//             rank++;
-//         }
-//         array[i][1] = rank;
-//         value = array[i][0];
-//     }
-// }
+    for (i = 0; i < arr_num; i++)
+    {
+        for (j = i + 1; j < arr_num; j++)
+        {
+            if (array[i][0] < array[j][0])
+            {
+                swap(&array[i][0], &array[j][0]);
+            }
+        }
+        if (array[i][0] != value)
+        {
+            rank++;
+        }
+        array[i][1] = rank;
+        value = array[i][0];
+    }
+}
 
 //値の入れ替え関数
-// void swap(int *x, int *y)
-// {
-//     int tmp = *x;
-//     *x = *y;
-//     *y = tmp;
-// }
+void swap(int *x, int *y)
+{
+    int tmp = *x;
+    *x = *y;
+    *y = tmp;
+}
 
 //ファイル中身表示用関数
-// void print_file(char *file_name)
-// {
-//     FILE *fp;
+#if 0
+void print_file(char *file_name)
+{
+    FILE *fp;
 
-//     if ((fp = fopen(file_name, "r")) == NULL)
-//     {
-//         printf("**** can't open the file ^v^ ****\n");
-//         exit(1);
-//     }
-// }
+    if ((fp = fopen(file_name, "r")) == NULL)
+    {
+        printf("**** can't open the file ^v^ ****\n");
+        exit(1);
+    }
+}
+#endif
 
 //配列コピー関数：memcpy()不使用
-// void copy_arr(int *score_arr, int arr_num)
-// {
-//     int i, j;
-//     for (i = 0; i < arr_num; i++)
-//     {
-//         rank_value[i][0] = score_arr[i];
-//     }
-// }
+#if 0
+void copy_arr(int *score_arr, int arr_num)
+{
+    int i, j;
+    for (i = 0; i < arr_num; i++)
+    {
+        rank_value[i][0] = score_arr[i];
+    }
+}
+#endif
 
 //値の順位付け関数（重複得点は同順位）
-// void add_rank(int score_arr[][NUM], int arr_num)
-// {
-//     int i, j;
-//     int rank = 0;  //順位用変数
-//     int value = 0; //得点の同値比較用変数
+#if 0
+void add_rank(int score_arr[][NUM], int arr_num)
+{
+    int i, j;
+    int rank = 0;  //順位用変数
+    int value = 0; //得点の同値比較用変数
 
-//     // copy_arr(score_arr, arr_num);
+    // copy_arr(score_arr, arr_num);
 
-//     score_arr[0][1] = rank;
+    score_arr[0][1] = rank;
 
-//     for (i = 0; i < arr_num; i++)
-//     {
-//         if (score_arr[i][0] != value)
-//         {
-//             rank++;
-//         }
-//         score_arr[i][1] = rank;
-//         value = score_arr[i][0];
-//     }
-// }
+    for (i = 0; i < arr_num; i++)
+    {
+        if (score_arr[i][0] != value)
+        {
+            rank++;
+        }
+        score_arr[i][1] = rank;
+        value = score_arr[i][0];
+    }
+}
+#endif
 
 /**
  * 順位付けメモ
