@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 
-#define D_DEBUG_ON //デバッグ時に有効化
+// #define D_DEBUG_ON //デバッグ時に有効化
 
 double arr[3] = {10.2, 22.3, 55.2};
 
