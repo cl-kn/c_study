@@ -16,7 +16,7 @@ long func(long num1, long num2)
 }
 
 //関数ポインタを引数に持つ関数 ※typedef未使用
-void sub(long (*pfunc)(int, short), int num)
+void sub1(long (*pfunc)(int, short), int num)
 {
     return;
 }
@@ -25,7 +25,7 @@ void sub(long (*pfunc)(int, short), int num)
 //関数ポインタ型を別名でtypedefする
 typedef long (*FP_FUNC)(int, short);
 
-void sub(FP_FUNC pfunc, int num)
+void sub2(FP_FUNC pfunc, int num)
 {
     return;
 }
@@ -48,11 +48,11 @@ int main(void)
     //関数ポインタの複雑さ*************************
 
     long (*p_func_sub)(int, short) = NULL; // 関数ポインタ
-    sub(p_func_sub, 100);                  //関数ポインタを引数で関数に渡す
+    sub1(p_func_sub, 100);                  //関数ポインタを引数で関数に渡す
 
     //typedef利用版
     FP_FUNC p_func_sub2 = NULL;
-    sub(p_func_sub2,100);
+    sub2(p_func_sub2,100);
 
     return 0;
 }
