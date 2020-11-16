@@ -23,12 +23,12 @@ void music(int musicKind)
 
     if (musicKind == E_MUSIC_A)
     {
-        // 1Mbyte
+        // 1M byte
         musicSize = 1024 * 1024;
     }
     else
     {
-        // 5Mbyte
+        // 5M byte
         musicSize = 5 * 1024 * 1024;
     }
 
