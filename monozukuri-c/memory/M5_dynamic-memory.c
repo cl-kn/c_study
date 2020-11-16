@@ -46,6 +46,15 @@ int main(void)
     //音楽Aを再生
     music(E_MUSIC_A);
 
+    short *p1 = NULL;
+    double *p2 = NULL;
+
+    //short型[要素数100]分の配列
+    p1 = (short *)malloc(sizeof(short) * 100);
+
+    //double型[要素数50]分の配列
+    p2 = (short *)malloc(sizeof(double) * 50);
+
     return 0;
 }
 
@@ -59,5 +68,12 @@ int main(void)
  * void * malloc(size_t size);
  * 仕様：確保したいヒープメモリのサイズを引数で指定する。
  * 戻り値：確保されたヒープメモリのアドレス
+ * 戻り値の型：voidポインタ型
+ * ・voidポインタ型（参照先のデータ型を持たない「場所を示すだけのポインタ」）
+ * ・malloc関数が提供するのは、確保したメモリの範囲であり、データ型は利用する側で決定する
+ * ・よって、malloc関数の戻り値であるメモリ番地を受け取る際には、対象メモリを扱うためのポインタ型へ明示的キャストが必要となる
+ *
+ *
+ * ※ free();でメモリを解放しないと、メモリリークの恐れがある
  *
 */
