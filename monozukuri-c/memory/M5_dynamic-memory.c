@@ -49,6 +49,8 @@ int main(void)
     short *p1 = NULL;
     double *p2 = NULL;
 
+    //malloc関数で配列用のメモリを確保する際の引数には、
+    //確保したいデータ型サイズに、配列要素数を掛け算する
     //short型[要素数100]分の配列
     p1 = (short *)malloc(sizeof(short) * 100);
 
