@@ -29,6 +29,10 @@ int reverse(char *str)
     {
         for (j = strlen(str) - 1; j > 0; j--)
         {
+            if (i == j) {
+                break;
+            }
+
             temp = str[i];
             str[i] = str[j];
             str[j] = temp;
@@ -75,10 +79,11 @@ int reverse_ans(char *str)
 
 int main(void)
 {
-    // char str[] = "Good Evening!";
-    char str[] = "aiueo";
+    char str[] = "Good Evening!";
+    // char str[] = "aiueo";
 
     reverse(str);
+    // reverse_ans(str);
 
     printf("%s\n", str);
 
