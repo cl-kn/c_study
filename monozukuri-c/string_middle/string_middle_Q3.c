@@ -47,6 +47,32 @@ int reverse(char *str)
     return 0;
 }
 
+int reverse_ans(char *str)
+{
+
+    char *pEnd = str;
+    char tmp;
+    int i;
+
+    //文字列終端へのポインタ取得
+    for (i = 0; i < strlen(str) - 1; i++)
+    {
+        pEnd++;
+    }
+
+    //前後の入れ替え
+    while (str < pEnd)
+    {
+        tmp = *str;
+        *str = *pEnd;
+        *pEnd = tmp;
+
+        str++;
+        pEnd--;
+    }
+    return 0;
+}
+
 int main(void)
 {
     // char str[] = "Good Evening!";
