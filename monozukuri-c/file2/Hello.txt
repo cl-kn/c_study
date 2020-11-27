@@ -1,0 +1,4 @@
+Corgi
+Big
+use fputs() Dog
+use fprintf コーギー C 2020
