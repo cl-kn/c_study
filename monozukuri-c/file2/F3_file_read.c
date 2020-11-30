@@ -39,12 +39,21 @@ int main(void)
 
 #if 1
 
+    FILE *fp3 = fopen("meibo.txt", "r");
     char name[32] = {0};
     int age = 0;
     double height = 0;
     char blood_type = 0;
 
-    FILE *fp3 = fopen("meibo.txt", "r");
+    while (fscanf(fp3, "%s %d %lf %c", name, &age, &height, &blood_type) != EOF)
+    {
+        printf("%s %d %3.2lf %c\n", name, age, height, blood_type);
+    }
+
+    // fscanf(fp3, "%s %d %lf %c", name, &age, &height, &blood_type);
+    // printf("%s %d %3.2lf %c\n", name, age, height, blood_type);
+
+    fclose(fp3);
 
 #endif
 

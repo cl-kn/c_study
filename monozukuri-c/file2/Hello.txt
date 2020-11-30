@@ -1,4 +1,1 @@
-Corgi
-
-use fputs() Dog
-use fprintf コーギー C 2020
+Hello World!
