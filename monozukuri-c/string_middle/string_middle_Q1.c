@@ -20,7 +20,7 @@ int countCharacter(char *search_str, char count_str)
 {
     int count = 0;
 
-    //解答より追加のエラーチェック
+    //追記：エラーチェック
     if (search_str == NULL)
     {
         return -1;
