@@ -23,7 +23,7 @@
 int load(char *, int[][NUM]);
 void store_file(int file_data_num);
 void swap2(int arr[][NUM], int i, int j);
-// void quick_sort(int arr[][NUM], int left, int right);
+void quick_sort(int arr[][NUM], int left, int right);
 void add_rank(int score_arr[][NUM], int arr_num);
 int compare_int(const void *x, const void *y);
 
@@ -124,7 +124,7 @@ void add_rank(int score_arr[][NUM], int arr_num)
 }
 
 //クイックソート（降順）
-#if 0
+#if 1
 void quick_sort(int arr[][NUM], int left, int right)
 {
     int i, j;
